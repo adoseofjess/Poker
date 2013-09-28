@@ -1,5 +1,5 @@
 class Deck
-  attr_reader :deck
+  attr_reader :cards
 
   def initialize
     @deck = []
@@ -8,7 +8,7 @@ class Deck
 
   def populate_deck
     [:hearts, :diamonds, :spades, :clubs].each do |suit|
-      ((2..10).to_a + [:jack, :queen, :king, :ace]).each do |number|
+      (2..14).each do |number|
         @deck << Card.new(number, suit)
       end
     end
@@ -18,4 +18,7 @@ class Deck
     @deck.shuffle.pop(count)
   end
 
+  def return_card(card)
+    @deck.push(card)
+  end
 end

@@ -1,8 +1,8 @@
 class Card
-  attr_reader :card, :suit
+  attr_reader :number, :suit
 
-  def initialize(card, suit)
-    @card = card
+  def initialize(number, suit)
+    @number = number
     @suit = suit
   end
 
